@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+	<div id="carouselExampleIndicators" class="carousel carousel-main slide" data-ride="carousel" data-interval="10000">
+	<ol class="carousel-indicators">
+		{% for item in cryptoCurrencies %}
+			<p class='carouselIndicatorsLabels'>{{ item.code }}</p>
+	    	<li data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index0 }}" class="{{ loop.index == 1 ? 'active' : '' }}"></li>
+	    {% endfor %}
+	</ol>
+	<div class="carousel-inner" role="listbox">
+
+		
+    	{% for item in cryptoCurrencies %}
+		    <div class="carousel-item{{ loop.index == 1 ? ' active' : '' }}" data-code="{{item.code}}">
+
+		    	<div id='{{item.code}}-{{item.cpair}}' class='chart_div'></div>
+
+		    	<div class="carousel-caption d-none d-md-block">
+				    <h1 class='car-code'><var name='code'>{{ item.code }}</var>/<var name='cpair'>{{ item.cpair }}</var></h1>
+
+				    <div class='car-bid'>BID: <var class='bid'>{{ item.bid }}</var></div>
+				    <div class='car-ask'>ASK: <var name='ask'>{{ item.ask }}</var></div>
+				    <div class='car-high'>High: <var name='high'>{{ item.high }}</var></div>
+				    <div class='car-low'>Low: <var name='low'>{{ item.low }}</var></div>
+				    <div class='car-last'><var name='price'>{{ item.price }}</var> {{ item.cpair }}</div>
+				    <div class='car-volume-label'>Volume:</div>
+				    <div class='car-volume'><var name='volume'>{{ item.volume }}</var> {{ item.code }}</div>
+				    <div class='car-balance'>Balance: <var name='balance'>{{ item.balance }}</var></div>
+				    <div class='car-balance car-balance-btc'>Balance (BTC): <var name='balance_btc'>{{ item.balance_btc }}</var></div>
+				    <div></div>
+				</div>
+		    </div>
+   		{% endfor %}
+
+
+	  </div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+
+
+
+{% endblock %}
