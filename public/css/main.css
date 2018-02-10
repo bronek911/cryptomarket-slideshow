@@ -1,0 +1,97 @@
+.carousel-item{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0);
+}
+
+.carousel-caption{
+	color:rgba(1,1,1,0.3);
+}
+
+.car-code{
+	font-size: 5rem;
+	position: fixed;
+	top: 7%;
+	left: 38.5%;
+}
+
+.car-last{
+	font-size: 3rem;
+	position: fixed;
+	top: 8%;
+	left: 5%;
+}
+
+.car-bid{
+	font-size: 1rem;
+	position: fixed;
+	top: calc(8% + 70px);
+	left: 5%;
+}
+
+.car-ask{
+	font-size: 1rem;
+	position: fixed;
+	top: calc(8% + 95px);
+	left: 5%;
+}
+
+.car-volume{
+	font-size: 3rem;
+	position: fixed;
+	top: 8%;
+	right: 5%;
+}
+
+.car-volume-label{
+	font-size: 2rem;
+	position: fixed;
+	top:  calc(8% - 30px);
+	right: calc(5%);
+	color: rgba(1,1,1,0.1);
+}
+
+.car-high{
+	font-size: 1rem;
+	position: fixed;
+	top: calc(8% + 70px);
+	right: 5%;
+}
+
+.car-low{
+	font-size: 1rem;
+	position: fixed;
+	top: calc(8% + 95px);
+	right: 5%;
+}
+
+.car-balance{
+	font-size: 1rem;
+	position: fixed;
+	top: calc(8% + 95px);
+	left: calc(41%);
+}
+
+.car-balance-btc{
+	top: calc(8% + 120px);
+}
+
+.carouselIndicatorsLabels{
+	font-size: 1rem;
+	position: relative;
+	top:3px;
+	left:30px;
+	color: white;
+}
+
+.chart_div{
+	height:80%;
+	position: initial;
+	bottom: -50px;
+	padding-top: 50px; 
+	margin: auto;
+}
+
+/*.chart_div > div > div{
+	width:100% !important;
+}*/
