@@ -17,7 +17,7 @@ $(function(){
 		console.log('drawChart()');
 
 		$.get({
-			url: '../api/history/'+pair+'/'+minutes+'/'+granularity,
+			url: '../index.php/api/history/'+pair+'/'+minutes+'/'+granularity,
 			success: function(response) {
 
 				$.each(response ,function(index, value){
