@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
- * @Route("/slideshow")
+ * @Route("/")
  */
 class SlideController extends Controller
 {
