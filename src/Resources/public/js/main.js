@@ -17,7 +17,7 @@ $(function(){
 		console.log('drawChart()');
 
 		$.get({
-			url: '../index.php/api/history/'+pair+'/'+minutes+'/'+granularity,
+			url: 'index.php/api/history/'+pair+'/'+minutes+'/'+granularity,
 			success: function(response) {
 
 				$.each(response ,function(index, value){
@@ -45,7 +45,7 @@ $(function(){
 
 	function updateData(){
 
-	    $.getJSON( "../api/wallet", function( data ) {
+	    $.getJSON( "../index.php/api/wallet", function( data ) {
 	  		$.each(data, function(index, value){
 	  			var currencies = data[index];
 	  			var carouselItems = $('.carousel-item').children();
