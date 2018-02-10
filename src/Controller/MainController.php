@@ -37,7 +37,6 @@ class MainController extends Controller
     public function historyAction($pair, $minutes, $granularity) 
     {
 
-
         $datetimeStart = new DateTime('-' . $minutes . 'minutes');
         $datetimeEnd = new DateTime('now');
         $start = $datetimeStart->format("Y-m-d\TH:i:s\Z");

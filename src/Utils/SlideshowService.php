@@ -83,14 +83,18 @@ class SlideshowService
                             }
                     }
             }
+
             $ticker->code = $activeAccount->currency;
             $ticker->balance = $activeAccount->balance;
             $ticker->balance_btc = $activeAccount->balance_btc;
             $stats = $this->getStats($ticker->code, $ticker->cpair);
+            $ticker->last = $stats->last;
             $ticker->low = $stats->low;
             $ticker->high = $stats->high;
 
+
             $list[] = $ticker;
+            // $list[] = $stats;
         }
         return $list;
     }

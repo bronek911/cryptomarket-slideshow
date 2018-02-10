@@ -12,7 +12,27 @@
 	</ol>
 	<div class="carousel-inner" role="listbox">
 
-		
+		{# <div class="carousel-item{{ loop.index == 1 ? ' active' : '' }}" data-code="{{item.code}}">
+
+		    	<div id='{{item.code}}-{{item.cpair}}' class='chart_div'></div>
+
+		    	<div class="carousel-caption d-none d-md-block">
+				    <h1 class='car-code'><var name='code'>{{ item.code }}</var>/<var name='cpair'>{{ item.cpair }}</var></h1>
+
+				    <div class='car-bid'>BID: <var class='bid'>{{ item.bid }}</var></div>
+				    <div class='car-ask'>ASK: <var name='ask'>{{ item.ask }}</var></div>
+				    <div class='car-high'>High: <var name='high'>{{ item.high }}</var></div>
+				    <div class='car-low'>Low: <var name='low'>{{ item.low }}</var></div>
+				    <div class='car-last'><var name='price'>{{ item.price }}</var> {{ item.cpair }}</div>
+				    <div class='car-volume-label'>Volume:</div>
+				    <div class='car-volume'><var name='volume'>{{ item.volume }}</var> {{ item.code }}</div>
+				    <div class='car-balance'>Balance: <var name='balance'>{{ item.balance }}</var></div>
+				    <div class='car-balance car-balance-btc'>Balance (BTC): <var name='balance_btc'>{{ item.balance_btc }}</var></div>
+				    <div></div>
+				</div>
+		</div> #}
+
+
     	{% for item in cryptoCurrencies %}
 		    <div class="carousel-item{{ loop.index == 1 ? ' active' : '' }}" data-code="{{item.code}}">
 
